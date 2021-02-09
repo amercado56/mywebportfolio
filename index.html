@@ -324,28 +324,28 @@
     </div>
     <div class="row">
       <div class="contact-form">
-        <form id=myForm>
+        <form action="sendEmail.php">
           <div class="row">
             <div class="w-50">
               <div class="input-group outer-shadow hover-in-shadow">
-                <input id="name" type="text" placeholder="Name" class="input-control">
+                <input name="name" type="text" placeholder="Name" required class="input-control">
               </div>
               <div class="input-group outer-shadow hover-in-shadow">
-                <input id="email" type="text" placeholder="Email" class="input-control">
+                <input name="email" type="text" placeholder="Email" required class="input-control">
               </div>
               <div class="input-group outer-shadow hover-in-shadow">
-                <input id="subject" type="text" placeholder="Subject" class="input-control">
+                <input name="subject" type="text" placeholder="Subject" required class="input-control">
               </div>
             </div>
             <div class="w-50">
               <div class="input-group outer-shadow hover-in-shadow">
-                <textarea id="body" class="input-control" placeholder="Message"></textarea>             
+                <textarea name="Message" class="input-control" placeholder="Message" required></textarea>             
               </div>              
             </div>
           </div>
           <div class="row">
             <div class="submit-btn">
-              <button type="button" onclick="sendEmail()" value="Send an Email" class="btn-1 outer-shadow hover-in-shadow">
+              <button  id= "submit" type="submit" value="Send an Email" class="btn-1 outer-shadow hover-in-shadow">
                 Send Message</button>
             </div>
           </div>

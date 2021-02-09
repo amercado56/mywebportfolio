@@ -37,7 +37,7 @@ function() {
 });
 
 
-/*------------------------Send Email-------------------*/
+/*------------------------Send Email-------------------
 function sendEmail(){
     var name = $("#name");
     var email = $("#email");
@@ -71,3 +71,4 @@ function isNotEmpty(caller){
         return true;
     }
 }
+*/
