@@ -8,7 +8,7 @@ global style
 /*define custom css variables*/
 :root{
     --bg-black-900:#000000;
-    --bg-black-100:#b0f1f5;
+    --bg-black-100:#000000;
     --bg-black-50:#cbfffc;
     --text-black-900: #000000;
     --text-black-700: #555555;
@@ -16,6 +16,7 @@ global style
     --text-black-300: #ff79f8;
     --text-black-200: #e30ef7;
     --modal-color:white;
+    --modal-border-color:#1bf0de;
     --contact-input-color:white;
     --outer-shadow: 3px 3px 3px #a0f5e3, -3px -3px 3px #8aecf3;
     --outer-shadow-0: 0 0 0 #a0f5e3, 0 0 0 #8aecf3;
@@ -25,27 +26,29 @@ global style
 /* override custom css variables for dark theme */
 body.dark{
     --bg-black-900:#ffffff;
-    --bg-black-100:#353535;
-    --bg-black-50:#2b2c2f;
+    --bg-black-100:#ffffff;
+    --bg-black-50:#000000;
     --text-black-900: #fffefe;
     --text-black-600: #ffffff;
     --text-black-300: #dd0000;
     --text-black-200: #fff23e;
-    --modal-color:rgb(187, 185, 185);
-    --contact-input-color:rgb(187, 185, 185);
-    --text-black-700: #02942e;
-    --outer-shadow: 3px 3px 3px #030000, -3px -3px 3px #030000;
+    --text-black-100: #000000
+    --modal-border-color: #790303;
+    --modal-color:rgb(8, 8, 8);
+    --contact-input-color:rgb(253, 245, 245);
+    --text-black-700: #18a318;
+    --outer-shadow: 3px 3px 3px #c40808, -3px -3px 3px #c40808;
     --outer-shadow-0: 0 0 0 #9e0000, 0 0 0 #9e0000;
     --inner-shadow: inset 3px 3px 3px #460000, inset -3px -3px 3px #460000;
-      transition: all 1.5s ease-out;
-    
+      transition: all .5s ease-out;
+
 }
 body{
     font-size: 16px;
     line-height: 1.5;
     overflow-x:hidden;
     background-color: var(--bg-black-50);
-    transition: all 1.5s ease-in;
+    transition: all .5s ease-out;
 }
 *:not(i){
     font-family: 'Raleway', sans-serif;
@@ -111,6 +114,7 @@ img{
     align-items: center;
 }
 
+.btn-2,
 .btn-1{
     padding: 10px 25px;
     font-size: 16px;
@@ -125,9 +129,12 @@ img{
     border: none;
     position:static;
 }
+
+.btn-2:after,
 .btn-1:after{
     border-radius: 30px;
 }
+
 
 .effect-wrap .effect{
     position: absolute;
@@ -318,6 +325,7 @@ home section
     text-transform: capitalize;
 }
 
+.home-section .home-text .btn-2,
 .home-section .home-text .btn-1{
     margin-top: 30px;
 }
@@ -406,7 +414,9 @@ home section
  .about-section .about-info span{
      font-weight: 600;
      font-style: italic;
+     color:var(--bg-black-100);
  }
+ .about-section .about-info .btn-2,
  .about-section .about-info .btn-1{
      margin: 30px 20px 0 0;
  }
@@ -590,19 +600,23 @@ modal section
     align-items:center;
     display: none;
     top:0
-    
+
 }
 .modal-content{
     width: 800px;
     height: 820px;
     background-color: var(--modal-color);
-    border-radius: 4px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: var(--modal-border-color);
+
 }
 .close{
     position: relative;
     margin-left: 96%;
     font-size: 30px;
     cursor: pointer;
+    color: var(--bg-black-900);
 
 }
 /*-------------------------------------------------------------------------
@@ -610,7 +624,7 @@ contact section
 -------------------------------------------------------------------------*/
 .contact-section{
     padding: 80px 0 80px;
-    min-height: 100vh;
+    min-height: 101vh;
     margin-bottom: 50px;
 }
 .contact-section .contact-item{
@@ -629,7 +643,7 @@ contact section
 }
 .contact-section .contact-item-inner i{
     font-size: 25px;
-    color:var(--skin-color);  
+    color:var(--skin-color);
 }
 .contact-section .contact-item-inner span{
     display: block;
@@ -682,11 +696,8 @@ contact section
     background-color:var(--contact-input-color);
 }
 
-.contact-section .submit-btn{
+.contact-section .btn-2{
     max-width: 100%;
     position: relative;
-    margin-left: 79%;
+    left: 79%;
 }
-
-
-

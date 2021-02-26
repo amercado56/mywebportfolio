@@ -9,6 +9,8 @@
   <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
   <!-- main css -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- responsive css -->
+  <link rel="stylesheet" type="text/css" href="css/responsive.css">
   <!-- default color skin -->
   <link rel='stylesheet' type="text/css" href="css/skins/color-1.css">
   <!-- DEMO -->
@@ -37,9 +39,25 @@
       </div>
   </header>
   <!-- header end -->
-<!-- navigation menu start  -->
+<!-- style switcher start -->
+<div class="style-switcher outer-shadow">
+  <div class="style-switcher-toggler s-icon outer-shadow hover-in-shadow">
+    <i class="fas fa-cog fa-spin"></i>
+  </div>
+  <div class="day-night s-icon outer-shadow hover-in-shadow">
+    <i class="fas fa-moon"></i>
+  </div>
+  <h4>Theme Colors</h4>
+  <div class="colors">
+    <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+    <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+    <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+    <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+    <span class="color-5" onclick="setActiveStyle('color-5')"></span>
 
-<!-- navigation menu end  -->
+  </div>
+</div>
+<!-- style switcher end -->
 
 <!-- home section start -->
 <section class="home-section section">
@@ -104,8 +122,8 @@
           <span id="aboutsection">Hello World!</span>
           <p>My name is Audis Mercado. I am a College Student from Interamerican University of Puerto Rico & I am aiming
             to become a Software Engineer or Web Developer.</p>            
-            <a href="myresume.pdf" target="_blank" class="btn-1 outer-shadow hover-in-shadow">Download Resume</a>
-            <a class="btn-1 outer-shadow hover-in-shadow" id="button">Contact Me</a>
+            <a href="myresume.pdf" target="_blank" class="btn-1 outer-shadow hover-in-shadow">Resume</a>
+            <a class="btn-1 outer-shadow hover-in-shadow" id="button" onclick="document.getElementById('id01')" >Contact Me</a>
         </div>
      </div>
      <!-- about tabs start --> 
@@ -281,9 +299,11 @@
 </section>
 <!-- about section end -->
 <!-- contact section start -->
-<div class="bg-modal">
+
+<div id="id01" class="bg-modal">
   <div class="modal-content">
-    <div class="close" id="close"><i class="far fa-times-circle"></i></div>
+    <span onclick="document.getElementById('id01')"></span>
+    <div class="close" id="close"><i class="fas fa-times"></i></div>
 <section class="contact-section section">
   <div class="container">
     <div class="row">
@@ -342,10 +362,10 @@
             </div>
           </div>
           <div class="row">
-            <div class="submit-btn">
-              <button  id= "submit" type="submit" value="Send an Email" class="btn-1 outer-shadow hover-in-shadow">
+            
+              <button  id= "submit" type="submit" value="Send an Email" class="btn-2 outer-shadow hover-in-shadow">
                 Send Message</button>
-            </div>
+            
           </div>
         </form>
       </div>
@@ -355,25 +375,7 @@
 </div>
 </div>
 <!-- contact section end -->
-<!-- style switcher start -->
-<div class="style-switcher outer-shadow">
-  <div class="style-switcher-toggler s-icon outer-shadow hover-in-shadow">
-    <i class="fas fa-cog fa-spin"></i>
-  </div>
-  <div class="day-night s-icon outer-shadow hover-in-shadow">
-    <i class="fas fa-moon"></i>
-  </div>
-  <h4>Theme Colors</h4>
-  <div class="colors">
-    <span class="color-1" onclick="setActiveStyle('color-1')"></span>
-    <span class="color-2" onclick="setActiveStyle('color-2')"></span>
-    <span class="color-3" onclick="setActiveStyle('color-3')"></span>
-    <span class="color-4" onclick="setActiveStyle('color-4')"></span>
-    <span class="color-5" onclick="setActiveStyle('color-5')"></span>
 
-  </div>
-</div>
-<!-- style switcher end -->
 <!-- main js -->
 <script src="js/main.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
